@@ -9,9 +9,9 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  basePath: "/opensource/",
+  basePath: "/opensource",
   output: "export",
-  distDir: "opensource/",
+  distDir: "opensource",
 };
 
 console.log(
