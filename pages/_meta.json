@@ -1,0 +1,13 @@
+{
+    "*": {
+        "title": "Opensource Projects",
+        "theme": {
+            "layout": "full",
+            "breadcrumb": true,
+            "footer": true,
+            "sidebar": false,
+            "toc": false,
+            "pagination": false
+        }
+    }
+}
