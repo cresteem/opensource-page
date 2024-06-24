@@ -68,3 +68,7 @@ jobs:
           local-dir: ./opensource/
           server-dir: opensource/
           security: strict
+          exclude: |
+            **/minomax/**
+            **/boost-seo-with-richie-js/**
+            **/enhancing-seo-with-hawk-js/**
