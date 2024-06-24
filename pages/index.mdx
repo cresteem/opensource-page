@@ -4,12 +4,50 @@ description:
 thumbnailUrl:
 ---
 
-import { ProjectCard } from '../components/utils'
+import { ProjectCard, infoboardView, hideView } from '../components/utils'
 import style from '../stylesheets/utils.module.scss'
+import { GiEagleHead, GiJetPack } from "react-icons/gi";
+import { PiFinnTheHumanFill } from "react-icons/pi";
+import { TbView360 } from "react-icons/tb";
+
 
 <div className={style.main}>
-<ProjectCard name="Richie" tech="JS" url="opensource/boost-seo-with-richie-js"/>
-<ProjectCard name="Hawk" tech="JS" url="opensource/enhancing-seo-with-hawk-js"/>
-<ProjectCard name="Minomax" tech="" url="opensource/minomax"/>
+  
+  <div>
+    <ProjectCard name="Richie" tech="JS"  icon={<PiFinnTheHumanFill size={80}/>
+    }/>
+    <a href='opensource/boost-seo-with-richie-js'>
+      <button>
+        <TbView360 size={28}/>
+      </button>
+    </a>
+  </div>
+  
+  <div>
+    <ProjectCard name="Hawk" tech="JS"  icon={<GiEagleHead size={80} />
+    }/>
+    <a href='opensource/enhancing-seo-with-hawk-js'>
+      <button>
+        <TbView360 size={28}/>
+      </button>
+    </a>
+  </div>
+  
+  <div>
+    <ProjectCard name="Minomax" tech="" icon={<GiJetPack size={80} />
+    }/>
+    <a href='opensource/minomax'>
+      <button>
+        <TbView360 size={28}/>
+      </button>
+    </a>
+  </div>
+
+</div>
+
+<div className={style.infoboard} onMouseLeave={() => {
+        hideView();
+      }}>
+  <p></p>
 </div>
 

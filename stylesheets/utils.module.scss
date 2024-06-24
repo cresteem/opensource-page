@@ -84,6 +84,11 @@
     .projectCard:hover {
         background-color: rgba(255, 255, 255, 0.12);
     }
+
+    .showinfo {
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        color: white !important;
+    }
 }
 
 .main {
@@ -96,19 +101,62 @@
     width: 90vw;
     height: 70vh;
     align-content: center;
+    justify-content: center;
+}
+
+.main>div {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main>div>a>button {
+    width: 100px;
+    height: 10px
+}
+
+.main>div>a>button>svg {
+    margin-top: 10px;
+    margin-left: 40px;
 }
 
 .projectCard {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 200px;
     height: 200px;
+    justify-content: center;
 }
+
 
 .projectCard>p {
     width: 200px;
+    height: 1ch;
     text-align: center;
     text-transform: uppercase;
-    align-self: center;
+}
+
+.infoboard {
+    display: none;
+    position: fixed;
+    top: 0;
+    padding-top: 35vh;
+    left: 20vw;
+    width: 90vw;
+    height: 70vh;
+}
+
+.infoboard>p {
+    width: 50vw;
+    height: 1ch;
+    text-align: center;
+}
+
+.showinfo {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.95) !important;
 }

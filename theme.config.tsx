@@ -34,7 +34,7 @@ const config: DocsThemeConfig = {
   themeSwitch: {
     component: <ThemeSwitch />,
   },
-
+  gitTimestamp: "",
   useNextSeoProps: () => {
     const { frontMatter } = useConfig();
     const { pathname, basePath } = useRouter();

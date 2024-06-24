@@ -163,14 +163,52 @@ export function CresteemLogo() {
   );
 }
 
-export const ProjectCard = ({ name, tech, url }: any) => {
+export const ProjectCard = ({ name, tech, icon }: any) => {
   return (
-    <a href={url}>
-      <div className={style.projectCard}>
-        <p>
-          <b>{name}</b> {tech}
-        </p>
-      </div>
-    </a>
+    <div
+      className={style.projectCard}
+      onMouseEnter={() => {
+        infoboardView(
+          name === "Richie"
+            ? "richie-js"
+            : name === "Hawk"
+            ? "hawk-js"
+            : "minomax"
+        );
+      }}
+    >
+      {icon}
+      <p>
+        <b>{name}</b> {tech}
+      </p>
+    </div>
   );
 };
+
+type projectName = "richie-js" | "hawk-js" | "minomax";
+export function infoboardView(type: projectName) {
+  const infoboard = document.querySelector(`.${style.infoboard}`);
+  infoboard?.classList.toggle(`${style.showinfo}`);
+  const textnode = infoboard?.querySelector("p");
+  if (type === "richie-js") {
+    if (textnode) {
+      textnode.innerHTML =
+        "Richie JS is an SEO tool that generates rich results, which are structured data snippets designed to enhance search engine visibility and improve user experience. Richie JS supports to generate various types of rich results recognized by Google. It leverages modern web technologies like Node.js and JavaScript, and is built on top of popular libraries such as Axios, Cheerio, Puppeteer, and Yargs ( Thanks to those creators, maintainers and contributors of these packages ).";
+    }
+  } else if (type === "hawk-js") {
+    if (textnode) {
+      textnode.innerHTML =
+        "Hawk JS is an advanced sitemap generator and deployer designed to enhance your website's search engine optimization (SEO). It automates the creation of comprehensive sitemaps and simplifies the submission process to major search engines, including Google, Bing, Yahoo, Yandex, Yep, and IndexNow supported search engines. Hawk JS is built to serve web developers, SEO enthusiasts, and digital marketers, providing an easy-to-use tool that boosts your site's visibility and search engine ranking.";
+    }
+  } else {
+    if (textnode) {
+      textnode.innerHTML =
+        "Minomax: a powerful Node.js package designed to efficiently compress a wide range of web resources, including videos, images, HTML, CSS, JavaScript, and SVG files. Enhance your website's performance and reduce load times with Minomax's robust compression capabilities.";
+    }
+  }
+}
+
+export function hideView() {
+  const infoboard = document.querySelector(`.${style.infoboard}`);
+  infoboard?.classList.toggle(`${style.showinfo}`);
+}
