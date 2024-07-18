@@ -9,13 +9,7 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  basePath: "/opensource",
+  basePath: "",
   output: "export",
-  distDir: "opensource",
+  distDir: "os_page",
 };
-
-console.log(
-  "\n###################################################\n",
-  "Localhost: http://localhost:3000/opensource",
-  "\n####################################################\n"
-);
