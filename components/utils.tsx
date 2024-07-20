@@ -63,7 +63,7 @@ export function LicenseFooter(): ReactElement {
       <p style={{ position: "absolute", right: "2vw" }}>
         Made By{" "}
         <b>
-          <a href="https://www.linkedin.com/in/iamspdarsan">DARSAN</a>
+          <a href="https://darsan.in">DARSAN</a>
         </b>
       </p>
     </>
